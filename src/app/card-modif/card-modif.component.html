@@ -1,0 +1,61 @@
+<div class="row" *ngIf="card">
+    <div class="col-6">
+        <div class="form-group">
+            <label>Titre</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.title">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label>Affiche</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.affiche">
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="card">
+    <div class="col-6">
+        <div class="form-group">
+            <label>Support</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.onAir">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label>Date</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="card.date">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="form-group">
+            <label>Set</label>
+            <br>
+            <select type="text" id="set-select" [(ngModel)]="card.set">
+                <option value="">--Choisissez un set--</option>
+                <option value="EX HIDDEN LEGENDS">Ex Hidden Legends</option>
+                <option value="BASE SET">Base Set</option>
+                <option value="FOSSIL">Fossil</option>
+                <option value="TEAM ROCKET">Team Rocket</option>
+                <option value="EX RUBY & SAPPHIRE">Ex Ruby & Sapphire</option>
+                <option value="EX SANDSTORM">Ex Sandstorm</option>
+                <option value="EX DRAGON">Ex Dragon</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label>Etat</label>
+            <br>
+            <input type="number" min="1" max="10" class="form-control" [(ngModel)]="card.synopsis">
+        </div>
+    </div>
+</div>
+
+<div class="text-center" *ngIf="card">
+    <button class="btn btn-outline-success" (click)="onModif()">Envoyer</button>
+</div>
